@@ -67,13 +67,13 @@
 		<div class="grid-rows grid grid-cols-1 gap-y-16">
 			<div class="flex h-24 w-xl items-center justify-center text-center">
 				{#if currentCommand}
-					<p class="text-5xl font-bold">{currentCommand}</p>
+					<p class="text-3xl font-bold">{currentCommand}</p>
 				{:else}
 					<p class="text-2xl text-gray-500">Press Start</p>
 				{/if}
 			</div>
 
-			<div class="flex items-center justify-between">
+			<div class="flex items-end justify-between">
 				{#if isRunning && currentDurationMs > 0}
 					{#key animationKey}
 						<CircularTimer durationMs={currentDurationMs} {remainingMs} />
